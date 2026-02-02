@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestorApp</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    <section class="lo">
+
+        <!-- LOGIN -->
+        <section class="login" id="loginForm">
+            <div class="logo">
+                <img src="../img/Logo.PNG" width="80" height="80">
+                <h2>RestorApp</h2>
+                <p>Login to your account</p>
+            </div>
+
+            <form class="formulario">
+                <label>Email Address</label>
+                <input 
+                    type="email"
+                    id="Email"
+                    placeholder="name@example.com"
+                    required
+                >
+
+                <label>Password</label>
+                <input 
+                    type="password"
+                    id="PasswordLogin"
+                    placeholder="********"
+                    required
+                >
+            </form>
+
+            <div class="botones">
+                <p id="noti-login"></p>
+
+                <button class="singin">Sign in</button>
+
+                <p>Do not have an account?</p>
+                <button class="singup">Sign up</button>
+            </div>
+        </section>
+
+        <!-- REGISTER -->
+        <section class="login escond" id="registerForm">
+            <div class="logo">
+                <img src="../img/Logo.PNG" width="80" height="80">
+                <h2>RestorApp</h2>
+                <p>Create your account</p>
+            </div>
+
+            <form class="formulario">
+                <label>Full Name</label>
+                <input 
+                    type="text"
+                    id="Nameuser"
+                    placeholder="e.g. John Doe"
+                    required
+                    pattern="[A-Za-z\s]+"
+                    title="Only letters and spaces"
+                >
+
+                <label>Email Address</label>
+                <input 
+                    type="email"
+                    id="Emailuser"
+                    placeholder="name@example.com"
+                    required
+                >
+
+                <label>Password</label>
+                <input 
+                    type="password"
+                    id="PasswordUser"
+                    placeholder="********"
+                    required
+                    minlength="6"
+                >
+            </form>
+
+            <div class="botones">
+                <p id="noti-register"></p>
+
+                <button class="singin singin2">Create account</button>
+
+                <p>Already have an account?</p>
+                <button class="singup singup2">Login</button>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="../js/link.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
+</body>
+</html>

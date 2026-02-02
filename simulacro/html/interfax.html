@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mennu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <nav class="d-flex w-100 justify-content-between">
+        <div class="d-flex column-gap-3 justify-content-lg-start m-3" >
+            <img src="../img/Logo.PNG" alt="" width="50px" height="50px">
+                <h2>RestorApp</h2>
+        </div>
+        <div>
+            <h2 id="welcomed"></h2>
+        </div>
+        <div class="d-flex column-gap-4 justify-content-end align-items-center">
+        <button type="button" class="btn btn-outline">Menu</button>
+        <button type="button" class="btn btn-outline" onclick="toggleCarrito()">My orders</button>
+        <button type="button" class="btn btn-outline">Profile</button>
+        </div>
+    </nav>
+
+    <main class="d-flex gap-4 m-4">
+
+        <!-- Apartado de filtros  -->
+        <div class="w-100 d-flex flex-column gap-4">
+            
+            <section class="d-flex justify-content-between align-items-center bg-white p-3 rounded shadow-sm">
+                <div class="d-flex flex-column">
+                    <h2 class="fw-bold">Our Menu</h2>
+                    <div class="d-flex gap-2 mt-2">
+                        <button class="btn btn-dark rounded-pill">All</button>
+                        <button class="btn btn-outline-secondary rounded-pill" id="butocate">🍔 Burgers</button>
+                        <button class="btn btn-outline-secondary rounded-pill" id="butocate" >🍟 Sides</button>
+                        <button class="btn btn-outline-secondary rounded-pill" id="butocate">🥤 Drinks</button>
+                    </div>
+                </div>
+                <div>
+                    <input type="search" class="form-control rounded-pill" placeholder="🔍 Search food...">
+                </div>
+            </section>
+
+            <!-- Platos dispnibles -->
+            <section class="row g-4 ">
+                <div class="col-md-4 ">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&h=200&fit=crop" class="card-img-top" alt="Burger">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0 fw-bold na1">Classic Beef</h5>
+                                <span class="text-success fw-bold price1">$8.99</span>
+                            </div>
+                            <p class="card-text text-muted small mt-2">Premium beef patty with cheddar cheese and lettuce.</p>
+                            <button class="btn btn-light w-100 mt-2" id="carr1">🛒 Add to order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=300&h=200&fit=crop" class="card-img-top" alt="Double Bacon">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0 fw-bold na2">Double Bacon</h5>
+                                <span class="text-success fw-bold price2">$12.50</span>
+                            </div>
+                            <p class="card-text text-muted small mt-2">Two patties, crispy bacon and melted swiss cheese.</p>
+                            <button class="btn btn-light w-100 mt-2" id="carr2">🛒 Add to order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=300&h=200&fit=crop" class="card-img-top" alt="Fries">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0 fw-bold na3">Golden Fries</h5>
+                                <span class="text-success fw-bold price3">$3.99</span>
+                            </div>
+                            <p class="card-text text-muted small mt-2">Freshly cut potatoes fried with sea salt.</p>
+                            <button class="btn btn-light w-100 mt-2" id="carr3">🛒 Add to order</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Apartado mi carrito -->
+        
+            <div id="carrito-container" class="h-100">
+                <div class="order-sidebar p-4 h-100 h-100 bg-white border-start">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0">Your Order <span class="badge bg-success rounded-circle cantOrder">2</span></h4>
+                        <button class="btn btn-link text-muted text-decoration-none btn-sm clear">Clear all</button>
+                    </div>
+
+                    <div class="d-flex row gap-3 mb-3 insertcarrito">
+                        
+                    </div>
+                    
+                    <hr class="my-4">
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Subtotal</span>
+                        <span class="fw-bold subtotalElement">$12.98</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="text-muted">Tax (8%)</span>
+                        <span class="fw-bold ivaElement">$1.04</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold">Total</h4>
+                        <h4 class="text-success fw-bold totalElement">$14.02</h4>
+                    </div>
+
+                        <button class="btn btn-success w-100 py-3 rounded-4 fw-bold confirOrder">Confirm Order →</button>
+                    </div>
+                </div>
+            </div>
+        
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/categoria.js" type="module"></script>
+    
+</body>
+</html> 

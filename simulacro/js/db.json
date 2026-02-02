@@ -1,0 +1,13 @@
+{
+  "Usuario": [
+    {
+      "id": 2,
+      "name": "Jorge",
+      "email": "ea@gmail.com",
+      "rol": "user",
+      "password": "43"
+    }
+  ],
+
+  "Pedidos":[]
+}
